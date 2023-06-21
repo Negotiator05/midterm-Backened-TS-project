@@ -1,0 +1,19 @@
+<h1>Edit Pet</h1>
+{{#with foundPet}}
+<form action='/pets/edit/{{petId}}' method="POST">
+    <label for="name">Enter Pet Name: </label>
+    <input type="text" name="name" placeholder="Enter Name" value="{{name}}" /><br>
+    
+    <label for="breed">Enter Breed Name: </label>
+    <input type="text" name="breed" placeholder="Enter Breed" value="{{breed}}" /><br>
+
+
+    <label for="description">Enter Pet Description: </label>
+    <input type="text" name="description" placeholder="Enter Description" value="{{description}}"/><br>
+
+    <label for="imgUrl">Enter Pet Picture: </label>
+    <input type="text" name="imgUrl" placeholder="Enter Picture" value="{{imgUrl}}" /><br>
+
+    <button type="submit" class="view-details-btn">Edit Pet </button>
+     <a href="/pets">Back to Home Page</a>
+{{/with}}
